@@ -11,3 +11,5 @@ password="password"
 org="organization-code"
 ```
 * Then run with ./github-backup.sh
+
+This script was based on a gist (https://gist.github.com/rodw/3073987), modified to not require hard coded username and passwords in the script.
