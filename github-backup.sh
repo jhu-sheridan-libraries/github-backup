@@ -1,9 +1,10 @@
 #!/bin/bash 
 # A simple script to backup an organization's GitHub repositories.
 
+GHBU_PATH=${GHBU_PATH-`dirname $0`}
 GHBU_CONFIG_FILE=${GHBU_CONFIG_FILE-"/etc/sysconfig/ghbu_config"}
 source ${GHBU_CONFIG_FILE}
-GHBU_BACKUP_DIR=${GHBU_BACKUP_DIR-"github-backups"}                  # where to place the backup files
+GHBU_BACKUP_DIR=${GHBU_BACKUP_DIR-"${GHBU_PATH}/github-backups"}                  # where to place the backup files
 GHBU_ORG=${GHBU_ORG-$org}                                   # the GitHub organization whose repos will be backed up
                                                                      # (if you're backing up a user's repos instead, this should be your GitHub username)
 GHBU_UNAME=${GHBU_UNAME-$username}                               # the username of a GitHub account (to use with the GitHub API)
